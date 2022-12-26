@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/eighttiles/eightTilesNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/eighttiles/eightTilesNode.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,36 +36,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2J8NSKsugOdMl5vYEb8RHom2ocu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.uniupo.studenti.mg.tree" />
