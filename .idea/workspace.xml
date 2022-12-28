@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" afterDir="false" />
+    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="added bfs classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/it/uniupo/studenti/mg/util/ArraySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/BestFirstSearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/eighttiles/eightTilesNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,14 +44,108 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.uniupo.studenti.mg.tree" />
     </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BestFirstSearchTest.getChildrenTest2">
+    <configuration name="BestFirstSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIEMG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniupo.studenti.mg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestFirstSearchTest.getChildrenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIEMG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniupo.studenti.mg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
+      <option name="METHOD_NAME" value="getChildrenTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestFirstSearchTest.getChildrenTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIEMG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniupo.studenti.mg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
+      <option name="METHOD_NAME" value="getChildrenTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestFirstSearchTest.printEightTileState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIEMG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniupo.studenti.mg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
+      <option name="METHOD_NAME" value="printEightTileState" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaProgrammigTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIEMG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniupo.studenti.mg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.JavaProgrammigTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BestFirstSearchTest.getChildrenTest2" />
+        <item itemvalue="JUnit.BestFirstSearchTest.getChildrenTest" />
+        <item itemvalue="JUnit.BestFirstSearchTest" />
+        <item itemvalue="JUnit.BestFirstSearchTest.printEightTileState" />
+        <item itemvalue="JUnit.JavaProgrammigTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,6 +156,8 @@
       <option name="presentableId" value="Default" />
       <updated>1671455748729</updated>
       <workItem from="1671455749803" duration="9706000" />
+      <workItem from="1672136443780" duration="12256000" />
+      <workItem from="1672222707405" duration="13537000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1671456210001</created>

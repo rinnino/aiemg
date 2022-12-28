@@ -17,7 +17,16 @@ import java.util.PriorityQueue;
  */
 public abstract class BestFirstSearch<E extends BestFirstSearchState & Comparable> {
     private final PriorityQueue<E> pq = new PriorityQueue<>();
+
+    /**
+     * Questa lista contiene la sequenza di azioni per andare dallo stato iniziale allo stato GOAL
+     * Le azioni dipendono dal singolo problema di ricerca ( su giu sinista destra del vuoto nell'8 tile )
+     */
     private ArrayList<String> actionList = new ArrayList<>();
+
+    /**
+     * Lista che contiene la sequenza degli stati per andare dallo stato iniziale allo stato GOAL
+     */
     private ArrayList<E> stateList = new ArrayList<>();
 
     public BestFirstSearch() {
@@ -37,7 +46,10 @@ public abstract class BestFirstSearch<E extends BestFirstSearchState & Comparabl
      * Se il nodo è un GOAL abbiamo finito la ricerca</li>
      * <li>Espandiamo il nodo selezionato valutando l'insieme delle azioni che possiamo
      * eseguire su quel nodo (nel gioco 8 tile spostare il vuoto in alto,basso,destra,sinistra)
-     * e generando un numero di nodi "figli" pari alle azioni possibili. Mettiamoli in pq</li>
+     * <li>L'espanzione del nodo selezionato genererà un numero di nodi "figli" <= al numero di azioni possibili che
+     * verranno aggiunti ala coda di priorità pq</li>
+     * <li>Il nodo selezionato e la sua azione generatrice corrispondente verranno appesi rispetticamente alle code
+     * stateList ed actionList</li>
      * <li>Tornare al punto 2</li>
      *
      * @param s stato iniziale

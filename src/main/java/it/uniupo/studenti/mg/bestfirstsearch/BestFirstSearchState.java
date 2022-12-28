@@ -13,6 +13,7 @@ import java.util.List;
  * </ul>
  */
  public interface BestFirstSearchState<E>  {
-    public abstract <E> List<E> getChildren();
-    public abstract Double evaluationFunction();
+    <E> List<E> getChildren();
+    Double evaluationFunction();
+    String selectHeuristic(String e);
 }
