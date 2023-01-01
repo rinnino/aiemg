@@ -7,18 +7,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Questa classe modella uno stato per la ricerca BestFirstSearch per il gioco 8 Tile.
+ * Questa classe modella uno stato per la ricerca BestFirstSearch per il gioco 8-Tile.
  *
  */
 
-public class BestFirstSearchStateEightTile implements
-        BestFirstSearchState,
-        Comparable<BestFirstSearchStateEightTile>{
+public class BestFirstSearchStateEightTile implements BestFirstSearchState{
 
     private int[] board = new int[]{1 ,2, 3, 4, 0, 5, 6, 7, 8};
-    private String defaultHeuristic = "H1";
+    private BestFirstSearchStateEightTile father = null;
 
-    private String selectedHeuristic = defaultHeuristic;
+    private int stateCost = 0;
 
     // Azione che ha portato alla generazione di questo stato, null se questo stato è radice
     private String genAction = null;
@@ -26,18 +24,27 @@ public class BestFirstSearchStateEightTile implements
     public BestFirstSearchStateEightTile() {
     }
 
-    public BestFirstSearchStateEightTile(int[] board, String genAction) {
+    public BestFirstSearchStateEightTile(int[] board, String genAction,int g) {
         this.board = board;
         this.genAction = genAction;
+        this.stateCost = g;
+    }
+
+    public BestFirstSearchStateEightTile(
+            int[] board, String genAction,int g, BestFirstSearchStateEightTile father){
+        this.board = board;
+        this.genAction = genAction;
+        this.stateCost = g;
+        this.father = father;
     }
 
     @Override
     public List<BestFirstSearchState> getChildren() {
         List<BestFirstSearchState> childrenList = new ArrayList<>();
-        BestFirstSearchState upChildren = this.moveUp();
-        BestFirstSearchState downChildren = this.moveDown();
-        BestFirstSearchState leftChildren = this.moveLeft();
-        BestFirstSearchState rightChildren = this.moveRight();
+        BestFirstSearchStateEightTile upChildren = this.moveUp();
+        BestFirstSearchStateEightTile downChildren = this.moveDown();
+        BestFirstSearchStateEightTile leftChildren = this.moveLeft();
+        BestFirstSearchStateEightTile rightChildren = this.moveRight();
         if(upChildren != null) childrenList.add(upChildren);
         if(downChildren != null) childrenList.add(downChildren);
         if(leftChildren != null) childrenList.add(leftChildren);
@@ -45,15 +52,6 @@ public class BestFirstSearchStateEightTile implements
         return childrenList;
     }
 
-    @Override
-    public Double evaluationFunction() {
-        return null;
-    }
-
-    @Override
-    public String selectHeuristic(String e) {
-        return null;
-    }
 
     /**
      * Muove la casella vuota in alto, se possibile
@@ -65,7 +63,7 @@ public class BestFirstSearchStateEightTile implements
         if(emptyPosition > 2){
             //vuoto non sulla prima riga
             BestFirstSearchStateEightTile children = new BestFirstSearchStateEightTile(
-                    this.board.clone(), "UP");
+                    this.board.clone(), "UP", this.stateCost + 1, this);
             children.board[emptyPosition] = children.board[emptyPosition-3];
             children.board[emptyPosition-3] = 0;
             return children;
@@ -79,7 +77,7 @@ public class BestFirstSearchStateEightTile implements
         if(emptyPosition < 6){
             //vuoto non sull' ultima riga
             BestFirstSearchStateEightTile children = new BestFirstSearchStateEightTile(
-                    this.board.clone(), "DOWN");
+                    this.board.clone(), "DOWN", this.stateCost + 1, this);
             children.board[emptyPosition] = children.board[emptyPosition+3];
             children.board[emptyPosition+3] = 0;
             return children;
@@ -93,7 +91,7 @@ public class BestFirstSearchStateEightTile implements
         if((emptyPosition % 3) != 0){
             //vuoto non sulla colonna piu a sinistra
             BestFirstSearchStateEightTile children = new BestFirstSearchStateEightTile(
-                    this.board.clone(), "LEFT");
+                    this.board.clone(), "LEFT", this.stateCost + 1, this);
             children.board[emptyPosition] = children.board[emptyPosition-1];
             children.board[emptyPosition-1] = 0;
             return children;
@@ -108,7 +106,7 @@ public class BestFirstSearchStateEightTile implements
         if((emptyPosition % 3) != 2){
             //vuoto non sulla colonna piu a destra
             BestFirstSearchStateEightTile children = new BestFirstSearchStateEightTile(
-                    this.board.clone(), "RIGHT");
+                    this.board.clone(), "RIGHT", this.stateCost + 1, this);
             children.board[emptyPosition] = children.board[emptyPosition+1];
             children.board[emptyPosition+1] = 0;
             return children;
@@ -116,17 +114,30 @@ public class BestFirstSearchStateEightTile implements
         return null;
     }
 
-    /**
-     * Override per l'interfaccia comparable. Ci serve per sfruttare la classe della priority queue
-     * Valuta l' evaluationFunction
-     *
-     * @param s the object to be compared.
-     * @return
-     */
-    @Override
-    public int compareTo(BestFirstSearchStateEightTile s) {
-        return this.evaluationFunction().compareTo(s.evaluationFunction());
+    private static int fromBoardPositionToAbscissa(int boardPosition){
+        return boardPosition%3;
     }
+
+    private static int fromBoardPositionToOrdinate(int boardPosition){
+        if (boardPosition<3) {return 0;}
+        if (boardPosition<6) {return 1;}
+        return 2;
+    }
+
+    public static int manhattanDistance(BestFirstSearchStateEightTile s,BestFirstSearchStateEightTile g){
+        int res = 0;
+        int[] sBoard = s.getBoard();
+        int[] gBoard = g.getBoard();
+        for(int i = 1; i<9; i++){
+            int sAbscissa = fromBoardPositionToAbscissa(ArraySearch.findFirstInArray(sBoard, i));
+            int sOrdinate = fromBoardPositionToOrdinate(ArraySearch.findFirstInArray(sBoard, i));
+            int gAbscissa = fromBoardPositionToAbscissa(ArraySearch.findFirstInArray(gBoard, i));
+            int gOrdinate = fromBoardPositionToOrdinate(ArraySearch.findFirstInArray(gBoard, i));
+            res += Math.abs((sAbscissa-gAbscissa))+Math.abs((sOrdinate-gOrdinate));
+        }
+        return res;
+    }
+
 
     /**
      * @return la rappresentazione del gioco:
@@ -142,10 +153,12 @@ public class BestFirstSearchStateEightTile implements
      */
     @Override
     public String toString(){
-        System.out.printf("Action %s\n", this.genAction);
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Action %s\n", this.genAction));
+        sb.append(String.format("g(n) =  %s\n", this.g()));
         String line = "+-----+-----+-----+\n";
+        sb.append(line);
         String numberLine = "|  %d  |  %d  |  %d  |\n";
-        StringBuffer sb = new StringBuffer(line);
         for(int i = 0; i <= 8; i+=3){
             sb.append(String.format(numberLine, board[i], board[i+1], board[i+2]));
             sb.append(line);
@@ -153,8 +166,26 @@ public class BestFirstSearchStateEightTile implements
         return sb.toString();
     }
 
+
     public int[] getBoard() {
-        return board;
+        return board.clone();
+    }
+
+    @Override
+    public Double g() {
+        return (double) this.stateCost;
+    }
+
+    @Override
+    public BestFirstSearchState getFather() {
+        return this.father;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof BestFirstSearchStateEightTile) {
+            return Arrays.equals(this.board, ((BestFirstSearchStateEightTile) o).getBoard());
+        }else return false;
     }
 
 }

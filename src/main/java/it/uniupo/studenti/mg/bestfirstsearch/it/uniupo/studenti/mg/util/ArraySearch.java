@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArraySearch {
     /**
-     * Cerca la prima posizione di un Integer in un Array di integer
+     * Cerca la prima posizione di un Integer in un Array integer
      * @param arr il vettore su cui cercare
      * @param val il valore da cercare
      * @return se esiste, la prima posizione che lo contiene, altrimenti -1
