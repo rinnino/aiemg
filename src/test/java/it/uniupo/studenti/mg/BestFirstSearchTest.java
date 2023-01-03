@@ -3,7 +3,7 @@ package it.uniupo.studenti.mg;
 import it.uniupo.studenti.mg.bestfirstsearch.AstarSearch;
 import it.uniupo.studenti.mg.bestfirstsearch.BestFirstSearchState;
 import it.uniupo.studenti.mg.bestfirstsearch.BestFirstSearchStateEightTile;
-import it.uniupo.studenti.mg.bestfirstsearch.it.uniupo.studenti.mg.util.ArraySearch;
+import it.uniupo.studenti.mg.util.ArraySearch;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.List;

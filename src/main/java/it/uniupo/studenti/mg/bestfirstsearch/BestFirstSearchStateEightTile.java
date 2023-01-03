@@ -1,6 +1,6 @@
 package it.uniupo.studenti.mg.bestfirstsearch;
 
-import it.uniupo.studenti.mg.bestfirstsearch.it.uniupo.studenti.mg.util.ArraySearch;
+import it.uniupo.studenti.mg.util.ArraySearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;

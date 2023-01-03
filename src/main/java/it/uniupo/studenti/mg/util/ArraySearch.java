@@ -1,4 +1,4 @@
-package it.uniupo.studenti.mg.bestfirstsearch.it.uniupo.studenti.mg.util;
+package it.uniupo.studenti.mg.util;
 
 import java.util.Arrays;
 

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="inizio scrittura gioco 8 tessere con relativi primi test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/AstarSearch.java" afterDir="false" />
+    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="Gioco 8 tessere, Bfs e A* funzionanti">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/it/uniupo/studenti/mg/util/ArraySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/it/uniupo/studenti/mg/util/ArraySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/it/uniupo/studenti/mg/util/ArraySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/util/ArraySearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/BestFirstSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/BestFirstSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +55,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.uniupo.studenti.mg.util" />
       <recent name="it.uniupo.studenti.mg.tree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JavaProgrammigTests.arrayCloneWithPrimitiveTypes">
+  <component name="RunManager" selected="JUnit.BestFirstSearchTest.aStarTest2">
     <configuration name="BestFirstSearchTest.aStarTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
@@ -145,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JavaProgrammigTests.arrayCloneWithPrimitiveTypes" />
         <item itemvalue="JUnit.BestFirstSearchTest.aStarTest2" />
+        <item itemvalue="JUnit.JavaProgrammigTests.arrayCloneWithPrimitiveTypes" />
         <item itemvalue="JUnit.BestFirstSearchTest.aStarTest1" />
         <item itemvalue="JUnit.JavaProgrammigTests.priorityQueueTest" />
         <item itemvalue="JUnit.BestFirstSearchTest.getChildrenTest3" />
@@ -168,7 +165,7 @@
       <workItem from="1672413827013" duration="11358000" />
       <workItem from="1672440739239" duration="6697000" />
       <workItem from="1672481766543" duration="2101000" />
-      <workItem from="1672483915900" duration="17773000" />
+      <workItem from="1672483915900" duration="21468000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1671456210001</created>
@@ -184,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672241738027</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Gioco 8 tessere, Bfs e A* funzionanti">
+      <created>1672581553961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672581553961</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +208,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="inizio scrittura gioco 8 tessere con relativi primi test" />
-    <option name="LAST_COMMIT_MESSAGE" value="inizio scrittura gioco 8 tessere con relativi primi test" />
+    <MESSAGE value="Gioco 8 tessere, Bfs e A* funzionanti" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gioco 8 tessere, Bfs e A* funzionanti" />
   </component>
 </project>
