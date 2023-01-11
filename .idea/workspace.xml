@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="Gioco 8 tessere, Bfs e A* funzionanti">
+    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="qualche piccolo fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameStateTicTacToeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearchImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/MinimaxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/BestFirstSearchStateEightTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/bestfirstsearch/it/uniupo/studenti/mg/util/ArraySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/util/ArraySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/BestFirstSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/BestFirstSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +51,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.31954023",
     "settings.editor.selected.configurable": "Console",
     "vue.rearranger.settings.migration": "true"
   }
@@ -59,8 +63,8 @@
       <recent name="it.uniupo.studenti.mg.tree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BestFirstSearchTest.aStarTest2">
-    <configuration name="BestFirstSearchTest.aStarTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MinimaxTest.miniMaxSearchTest1">
+    <configuration name="MinimaxTest.GameStateArgMaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -69,14 +73,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
-      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
-      <option name="METHOD_NAME" value="aStarTest1" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
+      <option name="METHOD_NAME" value="GameStateArgMaxTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BestFirstSearchTest.aStarTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.cutOffTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -85,14 +89,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
-      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
-      <option name="METHOD_NAME" value="aStarTest2" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
+      <option name="METHOD_NAME" value="cutOffTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BestFirstSearchTest.getChildrenTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.evalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +105,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
-      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.BestFirstSearchTest" />
-      <option name="METHOD_NAME" value="getChildrenTest3" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
+      <option name="METHOD_NAME" value="evalTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaProgrammigTests.arrayCloneWithPrimitiveTypes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.miniMaxSearchTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -117,14 +121,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
-      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.JavaProgrammigTests" />
-      <option name="METHOD_NAME" value="arrayCloneWithPrimitiveTypes" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
+      <option name="METHOD_NAME" value="miniMaxSearchTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaProgrammigTests.priorityQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.terminalTestControlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
-      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.JavaProgrammigTests" />
-      <option name="METHOD_NAME" value="priorityQueueTest" />
+      <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
+      <option name="METHOD_NAME" value="terminalTestControlTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BestFirstSearchTest.aStarTest2" />
-        <item itemvalue="JUnit.JavaProgrammigTests.arrayCloneWithPrimitiveTypes" />
-        <item itemvalue="JUnit.BestFirstSearchTest.aStarTest1" />
-        <item itemvalue="JUnit.JavaProgrammigTests.priorityQueueTest" />
-        <item itemvalue="JUnit.BestFirstSearchTest.getChildrenTest3" />
+        <item itemvalue="JUnit.MinimaxTest.miniMaxSearchTest1" />
+        <item itemvalue="JUnit.MinimaxTest.GameStateArgMaxTest" />
+        <item itemvalue="JUnit.MinimaxTest.evalTest" />
+        <item itemvalue="JUnit.MinimaxTest.cutOffTest" />
+        <item itemvalue="JUnit.MinimaxTest.terminalTestControlTest" />
       </list>
     </recent_temporary>
   </component>
@@ -166,6 +170,12 @@
       <workItem from="1672440739239" duration="6697000" />
       <workItem from="1672481766543" duration="2101000" />
       <workItem from="1672483915900" duration="21468000" />
+      <workItem from="1672755296029" duration="46000" />
+      <workItem from="1672865725064" duration="8030000" />
+      <workItem from="1672917563553" duration="11622000" />
+      <workItem from="1673020089942" duration="15245000" />
+      <workItem from="1673114314787" duration="19829000" />
+      <workItem from="1673346461579" duration="20117000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1671456210001</created>
@@ -188,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672581553961</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="qualche piccolo fix">
+      <created>1672755331841</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672755331841</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +226,7 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="inizio scrittura gioco 8 tessere con relativi primi test" />
     <MESSAGE value="Gioco 8 tessere, Bfs e A* funzionanti" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gioco 8 tessere, Bfs e A* funzionanti" />
+    <MESSAGE value="qualche piccolo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="qualche piccolo fix" />
   </component>
 </project>

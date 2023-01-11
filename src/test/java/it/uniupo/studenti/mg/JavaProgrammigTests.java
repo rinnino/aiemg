@@ -31,4 +31,5 @@ public class JavaProgrammigTests {
         System.out.println(pq.remove().toString());
         System.out.println(pq.remove().toString());
     }
+
 }
