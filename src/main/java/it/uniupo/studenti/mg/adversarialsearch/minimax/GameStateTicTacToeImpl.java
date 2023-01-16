@@ -51,10 +51,6 @@ public class GameStateTicTacToeImpl implements GameState, Comparable<GameStateTi
         this.depth = depth;
     }
 
-    public Player getPlayerWhoMoves() {
-        return playerWhoMoves;
-    }
-
     public ToDoubleFunction<char[][]> getEvalFunction() {
         return evalFunction;
     }
@@ -123,7 +119,7 @@ public class GameStateTicTacToeImpl implements GameState, Comparable<GameStateTi
     @Override
     public boolean cutOffTest(int cutOff) {
         if(terminalTest()){return true;}
-        else return depth > cutOff;
+        else return depth >= cutOff;
     }
 
     @Override

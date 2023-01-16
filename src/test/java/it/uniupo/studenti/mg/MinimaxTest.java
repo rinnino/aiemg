@@ -1,9 +1,6 @@
 package it.uniupo.studenti.mg;
 
-import it.uniupo.studenti.mg.adversarialsearch.minimax.GameState;
-import it.uniupo.studenti.mg.adversarialsearch.minimax.GameStateTicTacToeImpl;
-import it.uniupo.studenti.mg.adversarialsearch.minimax.MiniMaxSearch;
-import it.uniupo.studenti.mg.adversarialsearch.minimax.MiniMaxSearchImpl;
+import it.uniupo.studenti.mg.adversarialsearch.minimax.*;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -37,9 +34,12 @@ public class MinimaxTest {
     @Test
     public void  evalTest(){
         System.out.println("+--(evalTest)-------------------------------*");
-        System.out.println(ticTacToe.toString());
-        ToDoubleFunction<char[][]> eval = ticTacToe.getEvalFunction();
-        System.out.println("MAX: " + eval.applyAsDouble(ticTacToe.getBoard()));
+        GameStateTicTacToeImpl ticTacToeEval = new GameStateTicTacToeImpl(
+                new char[][]{{'o',' ','x'},{'o','x','x'},{' ',' ','o'}},
+                GameStateTicTacToeImpl.Player.MAX, 0);
+        System.out.println(ticTacToeEval);
+        ToDoubleFunction<char[][]> eval = ticTacToeEval.getEvalFunction();
+        System.out.println("Eval: " + eval.applyAsDouble(ticTacToeEval.getBoard()));
     }
 
     @Test
@@ -72,7 +72,7 @@ public class MinimaxTest {
             System.out.println(g.getEval());
         }
         System.out.println("Stato selezionato:\n" +
-                tttState.getActions().stream().max(Comparator.comparing(GameState::getEval)).get());
+                tttState.getActions().stream().max(Comparator.comparing(GameState::getEval)).orElse(null));
     }
 
     @Test
@@ -126,6 +126,17 @@ public class MinimaxTest {
         System.out.println("Starting from:\n"+state);
         MiniMaxSearch miniMaxSearch = new MiniMaxSearchImpl();
         System.out.println("Minimax Decision: \n" +miniMaxSearch.minimaxDecision(state));
+    }
+
+    @Test
+    public  void miniMaxWithCutOffTest1(){
+        System.out.println("+--(miniMaxSearchTest1)-------------------------------*");
+        GameState state = new GameStateTicTacToeImpl(
+                new char[][]{{'o',' ',' '},{'o','x','x'},{' ',' ','o'}},
+                GameStateTicTacToeImpl.Player.MAX, 0);
+        System.out.println("Starting from:\n"+state);
+        MiniMaxCutOffImpl miniMaxCutOff = new MiniMaxCutOffImpl(2);
+        System.out.println("Minimax Decision: \n" + miniMaxCutOff.minimaxDecision(state));
     }
 
 }

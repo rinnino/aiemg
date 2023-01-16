@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="qualche piccolo fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameStateTicTacToeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearchImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/MinimaxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fb05b73d-dedf-44ed-9c23-649621d37af0" name="Changes" comment="MiniMax con cutoff funzionante">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxCutOffImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/JavaProgrammigTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameStateTicTacToeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/GameStateTicTacToeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxSearchImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/MinimaxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/uniupo/studenti/mg/MinimaxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.31954023",
-    "settings.editor.selected.configurable": "Console",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31954023&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.uniupo.studenti.mg.util" />
       <recent name="it.uniupo.studenti.mg.tree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MinimaxTest.miniMaxSearchTest1">
+  <component name="RunManager" selected="JUnit.MinimaxTest.miniMaxWithCutOffTest1">
     <configuration name="MinimaxTest.GameStateArgMaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
@@ -112,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinimaxTest.miniMaxSearchTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.miniMaxWithCutOffTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -122,13 +119,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
       <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
-      <option name="METHOD_NAME" value="miniMaxSearchTest1" />
+      <option name="METHOD_NAME" value="miniMaxWithCutOffTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinimaxTest.terminalTestControlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinimaxTest.miniMaxWithCutOffTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIEMG" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +135,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="it.uniupo.studenti.mg" />
       <option name="MAIN_CLASS_NAME" value="it.uniupo.studenti.mg.MinimaxTest" />
-      <option name="METHOD_NAME" value="terminalTestControlTest" />
+      <option name="METHOD_NAME" value="miniMaxWithCutOffTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MinimaxTest.miniMaxSearchTest1" />
-        <item itemvalue="JUnit.MinimaxTest.GameStateArgMaxTest" />
+        <item itemvalue="JUnit.MinimaxTest.miniMaxWithCutOffTest1" />
         <item itemvalue="JUnit.MinimaxTest.evalTest" />
+        <item itemvalue="JUnit.MinimaxTest.GameStateArgMaxTest" />
+        <item itemvalue="JUnit.MinimaxTest.miniMaxWithCutOffTest2" />
         <item itemvalue="JUnit.MinimaxTest.cutOffTest" />
-        <item itemvalue="JUnit.MinimaxTest.terminalTestControlTest" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +172,8 @@
       <workItem from="1672917563553" duration="11622000" />
       <workItem from="1673020089942" duration="15245000" />
       <workItem from="1673114314787" duration="19829000" />
-      <workItem from="1673346461579" duration="20117000" />
+      <workItem from="1673346461579" duration="20824000" />
+      <workItem from="1673863144874" duration="15714000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1671456210001</created>
@@ -205,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672755331841</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="MiniMax prima versione funzionante">
+      <created>1673397142564</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673397142565</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +232,29 @@
     <MESSAGE value="inizio scrittura gioco 8 tessere con relativi primi test" />
     <MESSAGE value="Gioco 8 tessere, Bfs e A* funzionanti" />
     <MESSAGE value="qualche piccolo fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="qualche piccolo fix" />
+    <MESSAGE value="MiniMax prima versione funzionante" />
+    <MESSAGE value="MiniMax con cutoff funzionante" />
+    <option name="LAST_COMMIT_MESSAGE" value="MiniMax con cutoff funzionante" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxCutOffImpl.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxCutOffImpl.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/uniupo/studenti/mg/adversarialsearch/minimax/MiniMaxCutOffImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
