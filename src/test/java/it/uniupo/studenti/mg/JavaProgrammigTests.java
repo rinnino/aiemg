@@ -4,7 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.stream.Collectors;
 
 public class JavaProgrammigTests {
     /**
@@ -30,6 +33,16 @@ public class JavaProgrammigTests {
         pq.add(100.0);
         System.out.println(pq.remove().toString());
         System.out.println(pq.remove().toString());
+    }
+
+    @Test
+    void mapDeepCopyTest(){
+
+        Map<String,String> map = new HashMap<>();
+        map.put("Rain","True");
+        map.put("Sprinkler","False");
+        Map<String, String> mapDeepCopy = map.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(map.toString() + mapDeepCopy);
     }
 
 }

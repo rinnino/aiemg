@@ -38,6 +38,8 @@ public class BestFirstSearchStateEightTile implements BestFirstSearchState{
         this.father = father;
     }
 
+    //TODO: algoritmo che capisce se il gioco è possibile o meno ( se tessere fuori posto sono dispari, impossibile )
+
     @Override
     public List<BestFirstSearchState> getChildren() {
         List<BestFirstSearchState> childrenList = new ArrayList<>();

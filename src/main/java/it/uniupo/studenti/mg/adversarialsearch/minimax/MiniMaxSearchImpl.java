@@ -7,7 +7,7 @@ public class MiniMaxSearchImpl implements MiniMaxSearch{
     @Override
     public GameState minimaxDecision(GameState gameState) {
         long l = gameState.getActions().stream().peek( e -> System.out.println(e + "\n" + minValue(e))).count(); //Stampa di debug stati sintetizzati
-        System.out.println("Count:" + l);
+        System.out.println("Count:" + l); // stampa di debug
         return gameState.getActions().stream().max(Comparator.comparing(this::minValue)).orElse(null);
     }
 
